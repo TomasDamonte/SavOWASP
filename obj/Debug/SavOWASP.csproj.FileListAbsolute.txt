@@ -1,0 +1,10 @@
+C:\PROYECTOS\SavOWASP\SavOWASP\bin\Debug\SavOWASP.exe.config
+C:\PROYECTOS\SavOWASP\SavOWASP\bin\Debug\SavOWASP.exe
+C:\PROYECTOS\SavOWASP\SavOWASP\bin\Debug\SavOWASP.pdb
+C:\PROYECTOS\SavOWASP\SavOWASP\bin\Debug\OWASPZAPDotNetAPI.dll
+C:\PROYECTOS\SavOWASP\SavOWASP\obj\Debug\SavOWASP.csproj.AssemblyReference.cache
+C:\PROYECTOS\SavOWASP\SavOWASP\obj\Debug\SavOWASP.csproj.SuggestedBindingRedirects.cache
+C:\PROYECTOS\SavOWASP\SavOWASP\obj\Debug\SavOWASP.csproj.CoreCompileInputs.cache
+C:\PROYECTOS\SavOWASP\SavOWASP\obj\Debug\SavOWASP.csproj.CopyComplete
+C:\PROYECTOS\SavOWASP\SavOWASP\obj\Debug\SavOWASP.exe
+C:\PROYECTOS\SavOWASP\SavOWASP\obj\Debug\SavOWASP.pdb
