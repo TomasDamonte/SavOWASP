@@ -12,47 +12,8 @@ namespace SavOWASP
     public class Scanner
     {
         private string _target;
-        private string _apikey = "lsi776rff5176e6eb3a6ts8n39";
         private ClientApi _api;
         private IApiResponse _apiResponse;
-
-        public Scanner(string target)
-        {
-            _api = new ClientApi(ConfigurationManager.AppSettings["ZapOwaspURL"], int.Parse(ConfigurationManager.AppSettings["ZapOwaspPort"]), _apikey);
-            _target = target;
-            _api.alert.deleteAllAlerts();
-            ApiResponseList sites = (ApiResponseList)_api.core.sites();
-            foreach(ApiResponseElement site in sites.List)
-            {
-                _api.core.deleteSiteNode(site.Value,"","");
-            }           
-        }
-
-        public void Go()
-        {
-            string spiderScanId = StartSpidering();
-            PollTheSpiderTillCompletion(spiderScanId);
-
-            //StartAjaxSpidering();
-            //PollTheAjaxSpiderTillCompletion();
-
-            //string activeScanId = StartActiveScanning();
-            //PollTheActiveScannerTillCompletion(activeScanId);
-
-            string reportFileName = $"Report_{DateTime.Now:yyy-MM-dd-hh-mm-ss}.html";
-            //WriteXmlReport(reportFileName);
-            WriteHtmlReport(reportFileName);
-            Process.Start(reportFileName);
-            //PrintAlertsToConsole();
-
-            //ShutdownZAP();
-        }
-
-        public void Scan()
-        {
-            PollTheSpiderTillCompletion(StartSpidering());
-            PollTheActiveScannerTillCompletion(StartActiveScanning());            
-        }
 
         public string HtmlResult
         {
@@ -85,6 +46,46 @@ namespace SavOWASP
                 return JsonConvert.DeserializeObject<OWASPZAPReport>(JsonResult);
             }
         }
+
+        public Scanner(string target)
+        {
+            _api = new ClientApi(ConfigurationManager.AppSettings["ZapOwaspURL"], int.Parse(ConfigurationManager.AppSettings["ZapOwaspPort"]), ConfigurationManager.AppSettings["ApiKey"]);
+            _target = target;
+            _api.alert.deleteAllAlerts();
+            ApiResponseList sites = (ApiResponseList)_api.core.sites();
+            foreach(ApiResponseElement site in sites.List)
+            {
+                _api.core.deleteSiteNode(site.Value,"","");
+            }           
+        }
+
+        public void Go()
+        {
+            string spiderScanId = StartSpidering();
+            PollTheSpiderTillCompletion(spiderScanId);
+
+            //StartAjaxSpidering();
+            //PollTheAjaxSpiderTillCompletion();
+
+            //string activeScanId = StartActiveScanning();
+            //PollTheActiveScannerTillCompletion(activeScanId);
+
+            string reportFileName = $"Report_{DateTime.Now:yyy-MM-dd-hh-mm-ss}.html";
+            //WriteXmlReport(reportFileName);
+            WriteHtmlReport(reportFileName);
+            Process.Start(reportFileName);
+            //PrintAlertsToConsole();
+
+            //ShutdownZAP();
+        }
+
+        public void Scan()
+        {
+            Console.WriteLine($"[{DateTime.Now:dd/MM/yyyy hh:mm:ss}] Escaneando {_target} ...");
+            PollTheSpiderTillCompletion(StartSpidering());
+            PollTheActiveScannerTillCompletion(StartActiveScanning());
+            Console.WriteLine($"[{DateTime.Now:dd/MM/yyyy hh:mm:ss}] Escaneo terminado.");
+        }        
 
         private void ShutdownZAP()
         {
