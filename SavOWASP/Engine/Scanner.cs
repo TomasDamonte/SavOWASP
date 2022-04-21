@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using OWASPZAPDotNetAPI;
 using System;
+using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -17,7 +18,7 @@ namespace SavOWASP
 
         public Scanner(string target)
         {
-            _api = new ClientApi("localhost", 8080, _apikey);
+            _api = new ClientApi(ConfigurationManager.AppSettings["ZapOwaspURL"], int.Parse(ConfigurationManager.AppSettings["ZapOwaspPort"]), _apikey);
             _target = target;
             _api.alert.deleteAllAlerts();
             ApiResponseList sites = (ApiResponseList)_api.core.sites();
@@ -50,7 +51,7 @@ namespace SavOWASP
         public void Scan()
         {
             PollTheSpiderTillCompletion(StartSpidering());
-            PollTheActiveScannerTillCompletion(StartActiveScanning());
+            PollTheActiveScannerTillCompletion(StartActiveScanning());            
         }
 
         public string HtmlResult
@@ -136,12 +137,16 @@ namespace SavOWASP
                     break;
             }
             //Console.WriteLine("Active scanner complete");
+            while (int.Parse(((ApiResponseElement)_api.alert.numberOfAlerts("", "")).Value) == 0)
+            {
+            }
+            Thread.Sleep(500);
         }
 
         private string StartActiveScanning()
         {
             //Console.WriteLine("Active Scanner: " + _target);
-            _apiResponse = _api.ascan.scan(_target, "", "", "", "", "", "");
+            _apiResponse = _api.ascan.scan(_target, "", "true", "", "", "", "");
             return ((ApiResponseElement)_apiResponse).Value;
         }
 
