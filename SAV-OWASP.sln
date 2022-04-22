@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SavOWASP", "SavOWASP\SavOWASP.csproj", "{57429259-25B2-4688-9733-11ED577E16EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAV-OWASP", "SAV-OWASP\SAV-OWASP.csproj", "{82716885-B578-481B-AE2D-3813E67E54E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57429259-25B2-4688-9733-11ED577E16EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57429259-25B2-4688-9733-11ED577E16EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57429259-25B2-4688-9733-11ED577E16EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57429259-25B2-4688-9733-11ED577E16EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82716885-B578-481B-AE2D-3813E67E54E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82716885-B578-481B-AE2D-3813E67E54E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82716885-B578-481B-AE2D-3813E67E54E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82716885-B578-481B-AE2D-3813E67E54E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {26850740-13D2-4DA1-B263-4FB35A5777A6}
+		SolutionGuid = {B35BEA98-8A06-4A8C-B353-DE3251AA8281}
 	EndGlobalSection
 EndGlobal

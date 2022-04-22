@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SavOWASP")]
+[assembly: AssemblyTitle("SAV-OWASP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SavOWASP")]
+[assembly: AssemblyProduct("SAV-OWASP")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("57429259-25b2-4688-9733-11ed577e16ec")]
+[assembly: Guid("82716885-b578-481b-ae2d-3813e67e54e1")]
 
 // Version information for an assembly consists of the following four values:
 //
