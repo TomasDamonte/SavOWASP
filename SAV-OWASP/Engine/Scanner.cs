@@ -33,14 +33,19 @@ namespace SavOWASP
         {
             _target = target;
             _api = new ClientApi(ConfigurationManager.AppSettings["ZapOwaspURL"], int.Parse(ConfigurationManager.AppSettings["ZapOwaspPort"]), ConfigurationManager.AppSettings["ApiKey"]);
-            _api.spider.setOptionMaxDepth(profundidad);            
+            _api.spider.setOptionMaxDepth(profundidad);
+            ClearScanner();            
+            Scan();
+        }
+
+        private void ClearScanner()
+        {
             _api.alert.deleteAllAlerts();
             ApiResponseList sites = (ApiResponseList)_api.core.sites();
-            foreach(ApiResponseElement site in sites.List)
+            foreach (ApiResponseElement site in sites.List)
             {
-                _api.core.deleteSiteNode(site.Value,"","");
+                _api.core.deleteSiteNode(site.Value, "", "");
             }
-            Scan();
         }
 
         private void Scan()
