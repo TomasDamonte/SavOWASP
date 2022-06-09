@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAV-OWASP", "SAV-OWASP\SAV-OWASP.csproj", "{82716885-B578-481B-AE2D-3813E67E54E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{E1386D80-CAF8-406A-967E-8C0DD48EAECD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{82716885-B578-481B-AE2D-3813E67E54E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82716885-B578-481B-AE2D-3813E67E54E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82716885-B578-481B-AE2D-3813E67E54E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1386D80-CAF8-406A-967E-8C0DD48EAECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1386D80-CAF8-406A-967E-8C0DD48EAECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1386D80-CAF8-406A-967E-8C0DD48EAECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1386D80-CAF8-406A-967E-8C0DD48EAECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
