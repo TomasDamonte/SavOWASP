@@ -1,8 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SavOWASP;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 
 namespace UnitTests
 {
